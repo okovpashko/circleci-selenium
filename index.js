@@ -9,9 +9,14 @@ const { remote } = require('webdriverio');
     hostname: 'localhost',
     port: 4444,
     path: '/wd/hub',
-    capabilities: {
-      browserName: 'chrome'
-    }
+    capabilities: [
+      {
+        browserName: 'chrome'
+      },
+      {
+        browserName: 'firefox'
+      }
+    ]
   });
 
   await browser.url('https://webdriver.io');
