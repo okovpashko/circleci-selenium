@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/okovpashko/circleci-selenium/issues"
   },
-  "homepage": "https://github.com/okovpashko/circleci-selenium#readme"
+  "homepage": "https://github.com/okovpashko/circleci-selenium#readme",
+  "dependencies": {
+    "webdriverio": "^5.7.1"
+  }
 }
