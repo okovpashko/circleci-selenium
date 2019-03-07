@@ -11,9 +11,10 @@ jobs:
       - image: selenium/node-chrome:3.141.59-iron
         environment:
           - HUB_HOST: localhost
-#      - image: selenium/node-firefox:3.141.59-iron
-#        environment:
-#          - HUB_HOST: localhost
+      - image: selenium/node-firefox:3.141.59-iron
+        environment:
+          - HUB_HOST: localhost
+          - NODE_PORT: 5556
 
     working_directory: ~/repo
 
