@@ -1,7 +1,6 @@
 'use strict';
 
-
-const { remote } = require('webdriverio');
+const {remote} = require('webdriverio');
 
 (async () => {
   const browser = await remote({
@@ -9,9 +8,16 @@ const { remote } = require('webdriverio');
     hostname: 'localhost',
     port: 4444,
     path: '/wd/hub',
-    capabilities: {
-      browserName: 'chrome'
-    }
+    capabilities: [
+      {
+        browserName: 'chrome',
+        maxInstances: 1,
+      },
+      {
+        browserName: 'firefox',
+        maxInstances: 1,
+      },
+    ],
   });
 
   await browser.url('https://webdriver.io');
