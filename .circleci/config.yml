@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:10-browsers
-      - image: selenium-hub selenium/hub:3.141.59-iron
+      - image: selenium/hub:3.141.59-iron
       - image: selenium/node-chrome:3.141.59-iron
       - image: selenium/node-firefox:3.141.59-iron
 
