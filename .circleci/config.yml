@@ -9,7 +9,11 @@ jobs:
       - image: circleci/node:10-browsers
       - image: selenium/hub:3.141.59-iron
       - image: selenium/node-chrome:3.141.59-iron
+        environment:
+          - HUB_HOST: localhost
       - image: selenium/node-firefox:3.141.59-iron
+        environment:
+          - HUB_HOST: localhost
 
     working_directory: ~/repo
 
