@@ -27,11 +27,9 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-
       - setup_remote_docker
 
-      - start_selenium:
-          - run "docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:3.141.59-iron"
+      - run: "docker run -d -p 4444:4444 -v /dev/shm:/dev/shm selenium/standalone-chrome:3.141.59-iron"
 
       # run tests!
       - run: yarn test
