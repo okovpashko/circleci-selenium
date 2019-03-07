@@ -34,5 +34,10 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
+      - run:
+          name: waiting selenium grid to start
+          command: |
+            sleep 5
+
       # run tests!
       - run: yarn test
